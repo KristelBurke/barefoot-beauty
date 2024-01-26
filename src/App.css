@@ -8,4 +8,23 @@
 
 .active-link {
   color: #805a46;
+  text-decoration: underline;
+}
+
+.services-item {
+  transition: transform 0.6s ease;
+}
+
+.services-item:hover {
+  background-color: #f5e1e1;
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-size: 18px; 
+  transition: transform 0.6s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
 }

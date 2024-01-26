@@ -15,19 +15,19 @@ function Navigation() {
       <Link to="/">
         <img src="/logo.svg" alt="Barefoot Beauty Logo" className="h-24" />
       </Link>
-      <Link to="/" className={`text-gold hover:text-brown custom-font ${location.pathname === '/' ? 'active-link' : ''}`}>
+      <Link to="/" className={`text-gold hover:text-brown custom-font nav-link ${location.pathname === '/' ? 'active-link' : ''}`}>
         Home
       </Link>
-      <Link to="/about" className={`text-gold hover:text-brown custom-font ${location.pathname === '/about' ? 'active-link' : ''}`}>
+      <Link to="/about" className={`text-gold hover:text-brown custom-font nav-link ${location.pathname === '/about' ? 'active-link' : ''}`}>
         About
       </Link>
-      <Link to="/services" className={`text-gold hover:text-brown custom-font ${location.pathname === '/services' ? 'active-link' : ''}`}>
+      <Link to="/services" className={`text-gold hover:text-brown custom-font nav-link ${location.pathname === '/services' ? 'active-link' : ''}`}>
         Services
       </Link>
-      <Link to="/portfolio" className={`text-gold hover:text-brown custom-font ${location.pathname === '/portfolio' ? 'active-link' : ''}`}>
+      <Link to="/portfolio" className={`text-gold hover:text-brown custom-font nav-link ${location.pathname === '/portfolio' ? 'active-link' : ''}`}>
         Portfolio
       </Link>
-      <Link to="/contact" className={`text-gold hover:text-brown custom-font ${location.pathname === '/contact' ? 'active-link' : ''}`}>
+      <Link to="/contact" className={`text-gold hover:text-brown custom-font nav-link ${location.pathname === '/contact' ? 'active-link' : ''}`}>
         Contact
       </Link>
     </nav>

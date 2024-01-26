@@ -25,12 +25,12 @@ function Services() {
         </button>
         </div>
       </div>
-      <div className="mt-4 grid sm:grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="mt-4 grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
         {servicesList.map(service => (
-          <div key={service.id} className="p-4 border border-gold shadow-lg rounded-lg bg-white">
+          <div key={service.id} className="services-item p-4 border border-gold shadow-lg rounded-lg bg-white">
             <h3 className="text-lg text-gold font-semibold">{service.name}</h3>
             <p className="text-brown text-sm">{service.description}</p>
-            <p className="text-brown text-sm mt-4 rounded-md bg-gradient-to-r from-gold via-white to-gold px-3 py-1.5 inline-block"><strong>Price:</strong> {service.price}</p>
+            <p className="text-brown text-sm mt-4 rounded-md bg-gradient-to-r from-gold via-white to-gold px-3 py-1.5 inline-block"> {service.price}</p>
             <p className="text-brown text-sm mt-4"><strong>Duration:</strong> {service.duration}</p>
           </div>
         ))}
