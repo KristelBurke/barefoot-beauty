@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Classic Pedicure",
+      "description": "A traditional pedicure offering nail shaping, cuticle care, soothing foot bath, and nail polish.",
+      "duration": "45 minutes",
+      "price": "30 EUR"
+    },
+    {
+      "id": 2,
+      "name": "Gel Pedicure",
+      "description": "Includes everything in a Classic Pedicure plus a long-lasting gel nail polish application.",
+      "duration": "60 minutes",
+      "price": "40 EUR"
+    },
+    {
+      "id": 3,
+      "name": "Deluxe Spa Pedicure",
+      "description": "An indulgent treatment including foot soak, exfoliation, mask, massage, and polish.",
+      "duration": "90 minutes",
+      "price": "50 EUR"
+    },
+    {
+      "id": 4,
+      "name": "Athlete's Foot Treatment",
+      "description": "Specialized pedicure focusing on foot health, with treatments targeting athlete's foot.",
+      "duration": "60 minutes",
+      "price": "45 EUR"
+    },
+    {
+      "id": 5,
+      "name": "Hot Stone Pedicure",
+      "description": "A therapeutic pedicure using hot stones for massage, improving circulation and relaxation.",
+      "duration": "75 minutes",
+      "price": "55 EUR"
+    },
+    {
+      "id": 6,
+      "name": "Express Pedicure",
+      "description": "A quick fix for your feet, including nail shaping, buffing, and polish application.",
+      "duration": "30 minutes",
+      "price": "25 EUR"
+    }
+  ]
+  
