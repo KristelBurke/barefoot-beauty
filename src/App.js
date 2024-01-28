@@ -1,5 +1,5 @@
 import './App.css';
-import { Link, Route, Routes, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -7,7 +7,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 
 function Navigation() {
-  // Get the current location (route) using useLocation from react-router-dom
+
   const location = useLocation();
 
   return (
@@ -37,10 +37,8 @@ function Navigation() {
 function App() {
   return (
     <div className="App mx-auto max-w-6xl">
-      {/* Navigation Component */}
       <Navigation />
 
-      {/* Routes and Route Definitions */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
