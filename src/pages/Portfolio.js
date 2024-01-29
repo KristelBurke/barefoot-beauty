@@ -32,10 +32,10 @@ function Portfolio() {
         </div>
       </div>
       {isGalleryOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute top-24 right-24">
-            <button onClick={handleCloseGallery} className="text-brown text-xl">
-              Close
+        <div className="fixed inset-0 z-40 flex items-center justify-center">
+          <div className=" absolute top-24 right-24 shadow-lg z-50">
+            <button onClick={handleCloseGallery} className="text-pink bg-brown rounded-md px-1.5 text-xl">
+              X
             </button>
           </div>
           <div className="gallery-container">
@@ -54,7 +54,7 @@ function Portfolio() {
               thumbnailPosition="bottom"
               showPlayButton={false}
               renderItem={({ original }) => (
-                <img src={original} className="aspect-[24/12] w-full h-48 rounded-lg object-cover" alt="" />
+                <img src={original} className="gallery-image" alt="" />
               )}
             />
           </div>

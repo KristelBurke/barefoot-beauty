@@ -44,3 +44,7 @@
 .portfolio-item:hover {
   transform: scale(1.05);
 }
+
+.gallery-image {
+  height: 600px;
+}
