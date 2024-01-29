@@ -4,7 +4,7 @@ import servicesList from '../services.json';
 
 function Services() {
   return (
-    <div className="bg-gradient-to-b from-pink to-white p-8">
+    <div className="bg-gradient-to-b from-pink to-white p-8 mb-24">
       <h2 className="text-4xl font-bold text-gold custom-font mb-12">Our Services</h2>
         <div className="mt-10 p-6 border border-gold shadow-lg rounded-lg bg-gold">
           <h3 className="mb-4 text-2xl font-bold text-pink custom-font">Special Couples' Experience</h3>
@@ -21,7 +21,7 @@ function Services() {
             Contact us to schedule your special experience or to learn more about this exclusive service.
           </p>
         </div>
-        <div className="mt-6">
+        <div className="my-12">
           <Link to="/contact">
             <button type="button" className="button inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md hover:bg-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
               Book now
