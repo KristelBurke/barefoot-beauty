@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'pink': '#f5e1e1', // Replace with the exact light pink color you want
-        'gold': '#D4AF37', // Replace with the exact shade of gold you want
-        'brown': '#805a46', // Replace with the exact shade of gold you want
+        'pink': '#f5e1e1', 
+        'gold': '#D4AF37', 
+        'brown': '#805a46'
       }
     },
   },
