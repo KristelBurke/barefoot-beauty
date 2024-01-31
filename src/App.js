@@ -13,7 +13,7 @@ function Navigation() {
   return (
     <nav className="flex items-center justify-around p-2 bg-white">
       <Link to="/">
-        <img src="/logo.svg" alt="Barefoot Beauty Logo" className="h-24" />
+        <img src="/logo.svg" alt="Barefoot Beauty Logo" className="h-20" />
       </Link>
       <Link to="/" className={`text-gold hover:text-brown custom-font nav-link ${location.pathname === '/' ? 'active-link' : ''}`}>
         Home

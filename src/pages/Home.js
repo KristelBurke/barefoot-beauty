@@ -14,7 +14,7 @@ function Home() {
             <p className="mt-10 text-base leading-7 text-brown">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.</p>
             <div className="mt-20 flex">
             <Link to="/contact">
-            <button type="submit" className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md hover:bg-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
+            <button type="submit" className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
                 Book appointment
                 </button>
           </Link>

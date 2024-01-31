@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 function About() {
   return (
     <div className="bg-gradient-to-b from-pink to-white text-brown p-8 shadow-md">
-      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 overflow-hidden">
+      <div className="relative mx-auto max-w-7xl px-6 py-8 lg:px-8 overflow-hidden">
         <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gray-50 lg:block"></div>
         <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
           <div>
@@ -16,7 +16,7 @@ function About() {
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
                 <div className="aspect-h-7 aspect-w-12 lg:aspect-none">
-                  <img className="rounded-md object-cover object-center shadow-lg sm:w-[20rem] md:w-[30rem] lg:w-[37rem] max-w-none" src="/emma.jpg" alt="Emma" width="1184" height="1376" />
+                  <img className="rounded-md object-cover object-center shadow-lg sm:w-40 md:w-60 lg:w-[24rem] max-w-none" src="/emma.jpg" alt="Emma" />
                 </div>
               </figure>
             </div>

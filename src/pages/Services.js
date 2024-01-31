@@ -23,7 +23,7 @@ function Services() {
         </div>
         <div className="my-12">
           <Link to="/contact">
-            <button type="button" className="button inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md hover:bg-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
+            <button type="button" className="button inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
               Book now
             </button>
           </Link>

@@ -1,6 +1,20 @@
-import React from 'react';
+import React,  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_yak97n7', 'template_vh8bm7g', form.current, 'FtRbE6a9qUKE-bHVj')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   const socialLinks = [
     {
       name: 'Facebook',
@@ -81,7 +95,7 @@ function Contact() {
 
             <div className="px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-lg font-medium text-brown">Send us a message</h3>
-              <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form ref={form} onSubmit={sendEmail} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="first-name" className="text-sm font-medium text-brown flex justify-between">First name</label>
                   <div className="mt-1">
@@ -125,7 +139,7 @@ function Contact() {
                   </div>
                 </div>
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
-                  <button type="submit" className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold  px-6 py-3 text-sm font-medium text-brown shadow-sm hover:text-white sm:w-auto">Send</button>
+                  <button value="Send" type="submit" className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold  px-6 py-3 text-sm font-medium text-brown shadow-sm sm:w-auto">Send</button>
                 </div>
               </form>
             </div>
@@ -141,7 +155,6 @@ function Contact() {
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
-
 
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
