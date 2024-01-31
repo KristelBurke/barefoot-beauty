@@ -70,7 +70,7 @@ function Contact() {
         <div className="relative bg-white shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="relative overflow-hidden bg-gradient-to-b from-pink to-white px-4 py-10 sm:px-8 xl:p-12">
-              <h3 className="mt-12 text-4xl font-medium text-gold custom-font">Contact us </h3>
+              <h3 className="mt-12 text-3xl font-bold custom-font text-gold sm:text-4xl">Contact us </h3>
               <p className="mt-6 max-w-3xl text-sm text-brown">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
               
               <dl className="mt-8 space-y-6">

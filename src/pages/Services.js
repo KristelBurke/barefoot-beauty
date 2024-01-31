@@ -5,7 +5,7 @@ import servicesList from '../services.json';
 function Services() {
   return (
     <div className="bg-gradient-to-b from-pink to-white p-8 mb-24">
-      <h2 className="text-4xl font-bold text-gold custom-font mb-12">Our Services</h2>
+      <h2 className="text-3xl font-bold custom-font text-gold sm:text-4xl">Our Services</h2>
         <div className="mt-10 p-6 border border-gold shadow-lg rounded-md bg-gold">
           <h3 className="mb-4 text-2xl font-bold text-pink custom-font">Special Couples' Experience</h3>
           <p className="text-md mt-4 text-brown">
