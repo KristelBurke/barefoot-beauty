@@ -151,10 +151,10 @@ function Contact() {
               </form>
             </div>
           </div>
+          
         </div>
-      </div>
-     <footer className="mb-6 mx-6 shadow-sm">
-      <div className="absolute inset-x-0 bottom-20 bg-pink rounded-md mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
+        <footer className="absolute inset-x-0 bottom-24 bg-pink rounded-md mb-6 mx-6 shadow-sm">
+        <div className="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {socialLinks.map((item) => (
             <a key={item.name} href={item.href} className="text-brown hover:text-gold">
@@ -170,7 +170,9 @@ function Contact() {
           </p>
         </div>
       </div>
-    </footer>
+        </footer>
+      </div>
+     
     <ToastContainer
       position="top-center"
       theme="light"
