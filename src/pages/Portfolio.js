@@ -34,9 +34,9 @@ function Portfolio() {
       {isGalleryOpen && (
         <div className="fixed inset-0 z-40 flex items-center justify-center">
           <div className=" absolute top-24 right-24 shadow-lg z-50">
-            <button onClick={handleCloseGallery} className="button text-pink bg-brown shadow-md rounded-md px-1.5 py-1.5 text-sm">
+            <button onClick={handleCloseGallery} className="button text-white bg-brown shadow-md rounded-md hover:text-gold px-1.5 py-1.5 text-sm">
         
-            Close X
+            Close gallery X
             </button>
           </div>
           <div className="gallery-container">

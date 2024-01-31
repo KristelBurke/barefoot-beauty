@@ -1,5 +1,6 @@
 import React,  { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
 
 function Contact() {
   const form = useRef();
@@ -13,6 +14,12 @@ function Contact() {
       }, (error) => {
           console.log(error.text);
       });
+  };
+
+  const showToastMessage = () => {
+    toast.success("Your message is sent!", {
+      className: "toast-message",
+    });
   };
 
   const socialLinks = [
@@ -139,7 +146,7 @@ function Contact() {
                   </div>
                 </div>
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
-                  <button value="Send" type="submit" className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold  px-6 py-3 text-sm font-medium text-brown shadow-sm sm:w-auto">Send</button>
+                  <button value="Send" type="submit" onClick={showToastMessage} className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold  px-6 py-3 text-sm font-medium text-brown shadow-sm sm:w-auto">Send</button>
                 </div>
               </form>
             </div>
@@ -164,6 +171,11 @@ function Contact() {
         </div>
       </div>
     </footer>
+    <ToastContainer
+      position="top-center"
+      theme="light"
+      className="toast-message"
+      />
     </div>
   );
 }
