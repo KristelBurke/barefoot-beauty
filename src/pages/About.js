@@ -16,7 +16,7 @@ function About() {
             <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
               <figure>
                 <div className="aspect-h-7 aspect-w-12 lg:aspect-none">
-                  <img className="rounded-lg object-cover object-center shadow-lg sm:w-[20rem] md:w-[30rem] lg:w-[37rem] max-w-none" src="/emma.jpg" alt="Emma" width="1184" height="1376" />
+                  <img className="rounded-md object-cover object-center shadow-lg sm:w-[20rem] md:w-[30rem] lg:w-[37rem] max-w-none" src="/emma.jpg" alt="Emma" width="1184" height="1376" />
                 </div>
               </figure>
             </div>
@@ -32,7 +32,7 @@ function About() {
               <p className="mt-4">Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.</p>
               <div className="mt-12">
                 <Link to="/services">
-                  <button type="button" className="button inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md hover:text-pink focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
+                  <button type="button" className="button inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold px-6 py-3 text-sm font-medium text-brown shadow-md focus:outline-none focus:ring-2 focus:ring-pink focus:ring-offset-2 sm:w-auto">
                       Services
                   </button>
                 </Link>

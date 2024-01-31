@@ -24,7 +24,7 @@ function Portfolio() {
           <ul className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             {pictures.map((picture, index) => (
               <li key={picture.name} onClick={() => handleImageClick(index)}>
-                <img className="portfolio-item aspect-[3/2] w-full h-48 rounded-lg object-cover" src={picture.imageUrl} alt="" />
+                <img className="portfolio-item aspect-[3/2] w-full h-48 rounded-md object-cover" src={picture.imageUrl} alt="" />
                 <p className="text-sm text-start ml-2 leading-7 text-brown">{picture.title}</p>
               </li>
             ))}
@@ -34,8 +34,9 @@ function Portfolio() {
       {isGalleryOpen && (
         <div className="fixed inset-0 z-40 flex items-center justify-center">
           <div className=" absolute top-24 right-24 shadow-lg z-50">
-            <button onClick={handleCloseGallery} className="text-pink bg-brown rounded-md px-1.5 text-xl">
-              X
+            <button onClick={handleCloseGallery} className="button text-pink bg-brown shadow-md rounded-md px-1.5 py-1.5 text-sm">
+        
+            Close X
             </button>
           </div>
           <div className="gallery-container">

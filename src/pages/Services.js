@@ -6,7 +6,7 @@ function Services() {
   return (
     <div className="bg-gradient-to-b from-pink to-white p-8 mb-24">
       <h2 className="text-4xl font-bold text-gold custom-font mb-12">Our Services</h2>
-        <div className="mt-10 p-6 border border-gold shadow-lg rounded-lg bg-gold">
+        <div className="mt-10 p-6 border border-gold shadow-lg rounded-md bg-gold">
           <h3 className="mb-4 text-2xl font-bold text-pink custom-font">Special Couples' Experience</h3>
           <p className="text-md mt-4 text-brown">
             Enjoy a shared moment of relaxation and pampering with our special service for couples. 
@@ -30,7 +30,7 @@ function Services() {
         </div>
       <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {servicesList.map(service => (
-          <div key={service.id} className="services-item p-4 border border-gold shadow-lg rounded-lg bg-white">
+          <div key={service.id} className="services-item p-4 border border-gold shadow-lg rounded-md bg-white">
             <h3 className="text-lg text-gold font-semibold">{service.name}</h3>
             <p className="text-brown text-sm">{service.description}</p>
             <p className="text-brown text-sm mt-4 rounded-md bg-gradient-to-r from-gold via-white to-gold px-3 py-1.5 inline-block">{service.price}</p>
