@@ -65,8 +65,8 @@ function Contact() {
   ]
   
   return (
-    <div className="bg-white text-brown">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-6">
+    <div className="relative bg-white text-brown min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 pt-24 lg:px-6">
         <div className="relative bg-white shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="relative overflow-hidden bg-gradient-to-b from-pink to-white px-4 py-10 sm:px-8 xl:p-12">
@@ -153,8 +153,8 @@ function Contact() {
           </div>
         </div>
       </div>
-      <footer className="bg-pink rounded-md mb-6 mx-6 shadow-sm">
-      <div className="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
+     <footer className="mb-6 mx-6 shadow-sm">
+      <div className="absolute inset-x-0 bottom-20 bg-pink rounded-md mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {socialLinks.map((item) => (
             <a key={item.name} href={item.href} className="text-brown hover:text-gold">

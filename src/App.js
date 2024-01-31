@@ -36,7 +36,7 @@ function Navigation() {
 
 function App() {
   return (
-    <div className="App mx-auto max-w-6xl">
+    <div className="App mx-auto max-w-7xl min-h-screen">
       <Navigation />
 
       <Routes>
