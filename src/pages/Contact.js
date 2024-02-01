@@ -65,14 +65,14 @@ function Contact() {
   ]
   
   return (
-    <div className="relative bg-white text-brown min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 pt-24 lg:px-6">
-      <div className="grid grid-cols-1 lg:grid-cols-3">
-            <div className="relative overflow-hidden bg-gradient-to-b from-pink to-white px-4 py-10 sm:px-8 xl:p-12 ">
-              <h3 className="mt-12 text-3xl font-bold custom-font text-gold sm:text-4xl">Contact us </h3>
-              <p className="mt-12 max-w-3xl text-md text-brown">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
-              
-              <dl className="mt-12 space-y-6 sm:flex sm:flex-col sm:items-center sm:justify-center">
+    <div className="flex flex-col min-h-screen relative bg-white text-brown">
+      <div className="flex-grow mx-auto max-w-7xl px-6 pt-24 lg:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3">
+          <div className="relative overflow-hidden bg-gradient-to-b from-pink to-white px-4 py-10 sm:px-8 xl:p-12">
+            <h3 className="mt-12 text-3xl font-bold custom-font text-gold sm:text-4xl">Contact us </h3>
+            <p className="mt-12 max-w-3xl text-md text-brown">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+            
+            <dl className="mt-12 space-y-6 sm:flex sm:flex-col sm:items-center sm:justify-center lg:items-start lg:justify-start">
                 <dt><span className="sr-only">Phone number</span></dt>
                 <dd className="flex text-md text-brown">
                 <svg className="h-6 w-6 flex-shrink-0 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -98,9 +98,9 @@ function Contact() {
                   <span className="ml-3">742 Evergreen Terrace Springfield, OR</span>
                 </dd> 
               </dl>
-            </div>
+          </div>
 
-            <div className="mt-8px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
+          <div className="mt-8px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-xl font-medium text-brown">Send us a message</h3>
               <form ref={form} onSubmit={sendEmail} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
@@ -150,34 +150,36 @@ function Contact() {
                 </div>
               </form>
             </div>
-          </div>
-        <footer className="absolute inset-x-0 bottom-24 bg-pink rounded-md mb-6 mx-6 shadow-sm">
-        <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
-          {socialLinks.map((item) => (
-            <a key={item.name} href={item.href} className="text-brown hover:text-gold">
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
-          ))}
+        </div>
+      </div>
 
+      <footer className="bg-pink rounded-md mx-6 shadow-sm">
+        <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+          <div className="flex justify-center space-x-6 md:order-2">
+            {socialLinks.map((item) => (
+              <a key={item.name} href={item.href} className="text-brown hover:text-gold">
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+          <div className="mt-8 md:order-1 md:mt-0">
+            <p className="text-center text-xs leading-5 text-brown">
+              &copy; 2024 Barefoot Beauty Inc. All rights reserved.
+            </p>
+          </div>
         </div>
-        <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-xs leading-5 text-brown">
-            &copy; 2024 Barefoot Beauty Inc. All rights reserved.
-          </p>
-        </div>
-      </div>
-        </footer>
-      </div>
-     
-    <ToastContainer
-      position="top-center"
-      theme="light"
-      className="toast-message"
+      </footer>
+
+      <ToastContainer
+        position="top-center"
+        theme="light"
+        className="toast-message"
       />
-    </div>
+</div>
   );
 }
 
 export default Contact;
+
+
