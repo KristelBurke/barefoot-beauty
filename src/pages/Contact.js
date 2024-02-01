@@ -137,7 +137,7 @@ function Contact() {
                 <div className="flex justify-between">
                   <label htmlFor="message" className="text-sm font-medium text-brown">Message</label>
                     <span id="message-max" className="text-sm text-gold">
-                      {message.length}/500
+                      Max. characters {message.length}/500
                     </span>
                   </div>
                   <div className="mt-1">
