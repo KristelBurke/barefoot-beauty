@@ -14,7 +14,7 @@ function About() {
           
           <div>
             <div className="text-base leading-7 lg:max-w-lg">
-              <h1 className="mb-24 text-3xl font-bold custom-font text-gold sm:text-4xl">Meet Emma</h1>
+              <h1 className="mb-24 text-3xl font-bold tracking-wide custom-font text-gold sm:text-4xl">Meet Emma</h1>
               <div className="max-w-xl text-brown">
                 <p className="mt-12 text-lg">With over a decade of experience in pedicure services, Emma provides a touch of elegance and a commitment to foot health.</p>
                 <p className="mt-12">Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>

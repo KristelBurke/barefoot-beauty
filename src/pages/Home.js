@@ -9,8 +9,8 @@ function Home() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
             <h2 className="mb-16 custom-font italic text-5xl font-bold tracking-wider text-gold sm:text-7xl">Feel Elegant</h2>
-            <p className="mt-12 text-xl text-gold custom-font text-start">Good moments deserve beautiful feet.</p>
-            <p className="my-6 text-xl text-gold custom-font text-end">There’s always a good day for a pedicure.</p>
+            <p className="mt-12 text-xl text-gold custom-font text-start">There’s always a good day for a pedicure.</p>
+            <p className="my-6 text-xl text-gold custom-font text-end">Because good moments deserve beautiful feet.</p>
             <p className="my-20 text-base leading-7 text-brown">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.</p>
             <div className="mt-20 flex justify-center">
             <Link to="/contact">
