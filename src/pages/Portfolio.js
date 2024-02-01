@@ -17,8 +17,8 @@ function Portfolio() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-pink to-white p-8">
-      <h2 className="text-3xl font-bold custom-font text-gold sm:text-4xlt">Portfolio</h2>
+    <div className="bg-gradient-to-b from-pink to-white p-8 min-h-screen">
+      <h2 className="my-12 text-3xl font-bold custom-font text-gold sm:text-4xlt">Portfolio</h2>
       <div className="bg-tramsparent py-6 sm:py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ul className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">

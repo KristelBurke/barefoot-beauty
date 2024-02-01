@@ -67,41 +67,41 @@ function Contact() {
   return (
     <div className="relative bg-white text-brown min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24 lg:px-6">
-        <div className="relative bg-white shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3">
-            <div className="relative overflow-hidden bg-gradient-to-b from-pink to-white px-4 py-10 sm:px-8 xl:p-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3">
+            <div className="relative overflow-hidden bg-gradient-to-b from-pink to-white px-4 py-10 sm:px-8 xl:p-12 ">
               <h3 className="mt-12 text-3xl font-bold custom-font text-gold sm:text-4xl">Contact us </h3>
-              <p className="mt-6 max-w-3xl text-sm text-brown">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+              <p className="mt-12 max-w-3xl text-md text-brown">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
               
-              <dl className="mt-8 space-y-6">
+              <dl className="mt-12 space-y-6 sm:flex sm:flex-col sm:items-center sm:justify-center">
                 <dt><span className="sr-only">Phone number</span></dt>
-                <dd className="flex text-sm text-brown">
+                <dd className="flex text-md text-brown">
                 <svg className="h-6 w-6 flex-shrink-0 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                 </svg>
                   <span className="ml-3">+372 1234 5678</span>
                 </dd>
                 <dt><span className="sr-only">Email</span></dt>
-                <dd className="flex text-sm text-brown">
+                <dd className="flex text-md text-brown">
                 <dt><span className="sr-only">Address</span></dt>
                 <svg className="h-6 w-6 flex-shrink-0 text-gold" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 <a href="mailto:info@barefootbeauty.com" className="ml-3 underline">info@barefootbeauty.com</a>
                 </dd>
+
                 <dt><span className="sr-only">Address</span></dt>
-                <dd className="flex text-sm text-brown">
+                <dd className="flex text-md text-brown">
                 <svg  className="w-6 h-6 flex-shrink-0 text-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
-                  <span className="ml-3">742 Evergreen Terrace Springfield, OR 12345</span>
-                </dd>
+                  <span className="ml-3">742 Evergreen Terrace Springfield, OR</span>
+                </dd> 
               </dl>
             </div>
 
-            <div className="px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
-              <h3 className="text-lg font-medium text-brown">Send us a message</h3>
+            <div className="mt-8px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
+              <h3 className="text-xl font-medium text-brown">Send us a message</h3>
               <form ref={form} onSubmit={sendEmail} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="first-name" className="text-sm font-medium text-brown flex justify-between">First name</label>
@@ -151,10 +151,8 @@ function Contact() {
               </form>
             </div>
           </div>
-          
-        </div>
         <footer className="absolute inset-x-0 bottom-24 bg-pink rounded-md mb-6 mx-6 shadow-sm">
-        <div className="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {socialLinks.map((item) => (
             <a key={item.name} href={item.href} className="text-brown hover:text-gold">
