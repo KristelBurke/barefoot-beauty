@@ -48,3 +48,19 @@
 .gallery-image {
   height: 600px;
 }
+
+.toast-success {
+  background-color: #f5e1e1 !important;
+}
+
+.toast-body {
+  color: #805a46 !important;
+}
+
+.toast-progress-bar {
+  background-color: #805a46 !important;
+}
+
+.toast-success svg {
+  fill: #805a46 !important;
+}

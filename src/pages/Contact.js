@@ -4,8 +4,42 @@ import { ToastContainer, toast } from "react-toastify";
 
 function Contact() {
   const form = useRef();
-
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+
+  const validatePhone = (phone) => {
+    const re = /^\+\d{1,3}\d{7,10}$/;
+    return re.test(phone);
+  };
+  
+  const handlePhoneChange = (event) => {
+    setPhone(event.target.value);
+    if (validatePhone(event.target.value)) {
+      setPhoneError("");
+    } else {
+      setPhoneError("Please enter a valid phone number");
+    }
+  };
+
+  const validateEmail = (email) => {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+};
+
+const handleEmailChange = (event) => {
+  setEmail(event.target.value);
+  if (validateEmail(event.target.value)) {
+    setEmailError("");
+  } else {
+    setEmailError("Please enter a valid email address");
+  }
+};
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,10 +52,30 @@ function Contact() {
       });
   };
 
-  const showToastMessage = () => {
-    toast.success("Your message is sent!", {
-      className: "toast-message",
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  
+    if (!firstName || !lastName || !email || !message) {
+      toast.error("Please fill in all required fields");
+      return;
+    }
+    toast.success("Message sent successfully!", {
+      className: 'toast-success',
+      bodyClassName: "toast-body",
+      progressClassName: 'toast-progress-bar',
     });
+    
+  };
+
+  const handleFormSubmit = (e) => {
+    handleSubmit(e);
+    sendEmail(e);
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setSubject("");
+    setMessage("");
   };
 
   const socialLinks = [
@@ -93,65 +147,117 @@ function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
                   <span className="ml-3">742 Evergreen Terrace Springfield, OR</span>
-                </dd> 
+                </dd>
+
               </dl>
           </div>
 
-          <div className="mt-8px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
-              <h3 className="text-xl font-medium text-brown">Send us a message</h3>
-              <form ref={form} onSubmit={sendEmail} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <div className="px-6 pb-10 sm:px-10 lg:col-span-2 xl:p-12">
+              <h3 className="mb-12 text-xl font-medium text-brown">Send us a message</h3>
+              <form ref={form} onSubmit={handleFormSubmit} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
-                  <label htmlFor="first-name" className="text-sm font-medium text-brown flex justify-between">First name</label>
+                  <div className=" flex justify-start">
+                   <label htmlFor="first-name" className="text-sm font-medium text-brown">First name</label>
+                   <span className="text-sm font-medium text-red-500 ml-1">*</span>
+                  </div>
                   <div className="mt-1">
-                    <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"/>
+                    <input id="first-name" 
+                    name="first-name" 
+                    type="text" 
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)} autoComplete="given-name" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"/>
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="last-name" className="text-sm font-medium text-brown flex justify-between ">Last name</label>
+                <div className=" flex justify-start">
+                   <label htmlFor="last-name" className="text-sm font-medium text-brown">Last name</label>
+                   <span className="text-sm font-medium text-red-500 ml-1">*</span>
+                </div>
                   <div className="mt-1">
-                    <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"/>
+                    <input tid="last-name" 
+                    name="last-name" 
+                    type="text" 
+                    required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)} autoComplete="family-name" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"/>
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-sm font-medium text-brown flex justify-between ">Email</label>
+                <div className=" flex justify-start">
+                   <label htmlFor="email" className="text-sm font-medium text-brown">Email</label>
+                   <span className="text-sm font-medium text-red-500 ml-1">*</span>
+                </div>
                   <div className="mt-1">
-                    <input id="email" name="email" type="email" autoComplete="email" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"/>
+                    <input 
+                      id="email" 
+                      name="email"
+                      required
+                      type="email" 
+                      autoComplete="email" 
+                      className={`block w-full rounded-md border ${emailError ? 'border-red-500' : 'border-gold'} px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold`}
+                      value={email}
+                      onChange={handleEmailChange}
+                    />
+                    {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between">
-                    <label htmlFor="phone" className="text-sm font-medium text-brown flex justify-between ">Phone</label>
-                    <span id="phone-optional" className="text-sm text-gold">Optional</span>
-                  </div>
+                <div className="flex justify-between">
+                <label htmlFor="phone" className="text-sm font-medium text-brown flex justify-between ">Phone</label>
+                  <span id="phone-optional" className="text-sm text-gold">Optional</span>
+                </div>
                   <div className="mt-1">
-                    <input type="text" name="phone" id="phone" autoComplete="tel" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold" aria-describedby="phone-optional"/>
+                    <input 
+                      id="phone" 
+                      name="phone" 
+                      type="tel" 
+                      className={`block w-full rounded-md border ${phoneError ? 'border-red-500' : 'border-gold'} px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold`}
+                      value={phone}
+                      onChange={handlePhoneChange}
+                    />
+                    {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
                   </div>
+                  
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="subject" className="text-sm font-medium text-brown flex justify-between ">Subject</label>
                   <div className="mt-1">
-                    <input type="text" name="subject" id="subject" className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"/>
+                    <input  
+                    id="subject"
+                    name="subject"
+                    type="text" 
+                    className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}/>
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                 <div className="flex justify-between">
-                  <label htmlFor="message" className="text-sm font-medium text-brown">Message</label>
+                  <label htmlFor="message" className="text-sm font-medium text-brown">
+                    Message
+                    <span className="text-sm font-medium text-red-500 ml-1">*</span>
+                    </label>
                     <span id="message-max" className="text-sm text-gold">
                       Max. characters {message.length}/500
                     </span>
                   </div>
                   <div className="mt-1">
                   <textarea 
-                    id="message" name="message" rows="4" maxLength="500" value={message} 
+                    id="message" name="message" required rows="4" maxLength="500" value={message} 
                     onChange={(e) => setMessage(e.target.value)} className="block w-full rounded-md border border-gold px-4 py-3 text-brown shadow-sm focus:border-gold focus:ring-gold" 
                     aria-describedby="message-max">
                     </textarea>
+                    <div className="flex justify-start mt-4">
+                    <p className="text-sm font-medium text-red-500 ">* Required fields</p>
+                    </div>
                   </div>
                 </div>
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
-                  <button value="Send" type="submit" onClick={showToastMessage} className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold  px-6 py-3 text-sm font-medium text-brown shadow-sm sm:w-auto">Send</button>
+                  <button value="Send" type="submit" className="button mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-gold via-white to-gold  px-6 py-3 text-sm font-medium text-brown shadow-sm sm:w-auto">Send</button>
                 </div>
               </form>
+
             </div>
         </div>
       </div>
@@ -184,5 +290,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
