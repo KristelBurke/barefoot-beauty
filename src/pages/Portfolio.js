@@ -24,7 +24,7 @@ function Portfolio() {
           <ul className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             {pictures.map((picture, index) => (
               <li key={picture.name} onClick={() => handleImageClick(index)}>
-                <img className="portfolio-item aspect-[3/2] w-full h-48 rounded-md object-cover" src={picture.imageUrl} alt="" />
+                <img className="portfolio-item aspect-[3/2] w-full h-48 rounded-md object-cover" src={picture.imageUrl} alt="Gallery item" />
                 <p className="text-sm text-start ml-2 leading-7 text-brown">{picture.title}</p>
               </li>
             ))}
